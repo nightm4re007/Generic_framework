@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression suite]">
+  <test name="login(failed)">
+    <classes>
+      <class name="com.automation.runners.loginRunner">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDownClass"/>
+          <include name="Login" invocation-numbers="0"/>
+          <include name="AfterSteps"/>
+        </methods>
+      </class> <!-- com.automation.runners.loginRunner -->
+    </classes>
+  </test> <!-- login(failed) -->
+</suite> <!-- Failed suite [Regression suite] -->

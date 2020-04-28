@@ -1,0 +1,107 @@
+2020-04-25 14:39:30 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='text'])[1]"}
+  (Session info: chrome=80.0.3987.149)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {browserName: Chrome, databaseEnabled: false, desired: {browserName: Chrome, deviceName: My Phone, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: d4258f44-108a-45cf-972c-b02f8f2adb16
+*** Element info: {Using=xpath, value=(//input[@type='text'])[1]}
+2020-04-25 14:39:30 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 15:59:34 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.InvalidSelectorException: Locator Strategy 'name' is not supported for this session
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: bf410310-afa2-4885-8462-d7e4ea6a3e93
+*** Element info: {Using=name, value=Preferences}
+2020-04-25 15:59:34 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 16:06:20 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, newCommandTimeout: 14, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 14, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: 3419e041-a935-4817-b6d4-bd804e6b6f22
+*** Element info: {Using=id, value=Preferences}
+2020-04-25 16:06:20 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 16:10:37 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, newCommandTimeout: 14, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 14, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: 5bf66551-e4e8-4646-9ae9-74ee9bebe868
+*** Element info: {Using=id, value=Preferences}
+2020-04-25 16:10:37 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 16:13:03 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.InvalidSelectorException: Locator Strategy 'name' is not supported for this session
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, newCommandTimeout: 14, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 14, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: 899544f3-12fc-4593-b125-1541e994939b
+*** Element info: {Using=name, value=Preferences}
+2020-04-25 16:13:03 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 16:26:32 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.InvalidSelectorException: Locator Strategy 'name' is not supported for this session
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, newCommandTimeout: 14, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 14, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: 3a6142df-bb61-45da-9ce7-0054e5f63e12
+*** Element info: {Using=name, value=Preferences}
+2020-04-25 16:26:32 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 16:31:59 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.InvalidSelectorException: Locator Strategy 'name' is not supported for this session
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, databaseEnabled: false, desired: {appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, automationName: Appium, deviceName: My Phone, platformName: android, platformVersion: 9.0.0, udid: 4ceccac0}, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 7, deviceName: 4ceccac0, deviceScreenSize: 1080x2340, deviceUDID: 4ceccac0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, udid: 4ceccac0, warnings: {}, webStorageEnabled: false}
+Session ID: 76e02e45-97bb-4a86-a345-5b50b97d7639
+*** Element info: {Using=name, value=Preferences}
+2020-04-25 16:31:59 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-25 18:05:51 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-25 19:12:48 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 15:35:13 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 15:39:03 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=81.0.4044.122)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\HP\AppData\Local\T...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 81.0.4044.122, webStorageEnabled: true}
+Session ID: 2416ad60b417773105cf5c036820c01f
+*** Element info: {Using=xpath, value=//input[@type='search']}
+2020-04-27 15:39:03 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-27 15:39:14 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='search']"}
+  (Session info: chrome=81.0.4044.122)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\HP\AppData\Local\T...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 81.0.4044.122, webStorageEnabled: true}
+Session ID: bc3041976c7e1d4ee952a984c232586f
+*** Element info: {Using=xpath, value=//input[@type='search']}
+2020-04-27 15:39:14 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-27 15:40:58 INFO  webeventlistener:129 - Exception occured: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='search']"}
+  (Session info: chrome=81.0.4044.122)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AV2ODUL9', ip: '169.254.106.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\HP\AppData\Local\T...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 81.0.4044.122, webStorageEnabled: true}
+Session ID: d41957843d94423b12b76d84cd8695e1
+*** Element info: {Using=xpath, value=//input[@type='search']}
+2020-04-27 15:40:58 INFO  webeventlistener:129 - Test case failed...refer below screen-shot for detailed info
+2020-04-27 15:42:24 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 16:00:20 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 16:34:45 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 16:47:25 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 18:32:50 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
+2020-04-27 19:00:27 INFO  webeventlistener:129 - Found Element By : By.xpath: (//input[@type='text'])[1]
