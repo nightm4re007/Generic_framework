@@ -1,20 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[Found Element By : By.xpath: (//input[@type='text'])[1]]]>
+      <![CDATA[Found Element By : By.xpath: (//input)[3]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: (//input)[3]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: (//input)[4]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: (//input)[4]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: (//input)[5]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: (//input)[5]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on XP (707c897fa8103d7b67280aeb0780001d)] -> xpath: (//input)[5]]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on XP (06d377bc11046853e32fbb348ad9f664)] -> xpath: (//input)[5]]]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: //*[text()='SIGN-OFF']]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: //*[text()='SIGN-OFF']]]>
     </line>
   </reporter-output>
-  <suite name="Regression suite" duration-ms="23262" started-at="2020-04-27T13:30:10Z" finished-at="2020-04-27T13:30:34Z">
+  <suite name="Regression suite" duration-ms="43697" started-at="2020-07-08T17:19:08Z" finished-at="2020-07-08T17:19:52Z">
     <groups>
     </groups>
-    <test name="login" duration-ms="23262" started-at="2020-04-27T13:30:10Z" finished-at="2020-04-27T13:30:34Z">
+    <test name="login1" duration-ms="43697" started-at="2020-07-08T17:19:08Z" finished-at="2020-07-08T17:19:52Z">
       <class name="com.automation.runners.loginRunner">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.automation.runners.loginRunner@e320068]" name="setUP" is-config="true" duration-ms="319" started-at="2020-04-27T19:00:10Z" finished-at="2020-04-27T19:00:11Z">
+        <test-method status="PASS" signature="dockerStart()[pri:0, instance:com.automation.runners.loginRunner@64bf3bbf]" name="dockerStart" is-config="true" duration-ms="7" started-at="2020-07-08T22:49:08Z" finished-at="2020-07-08T22:49:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dockerStart -->
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.automation.runners.loginRunner@64bf3bbf]" name="setUP" is-config="true" duration-ms="252" started-at="2020-07-08T22:49:08Z" finished-at="2020-07-08T22:49:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="Login(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.runners.loginRunner@e320068]" name="Login" duration-ms="22262" started-at="2020-04-27T19:00:11Z" description="login" data-provider="features" finished-at="2020-04-27T19:00:33Z">
+        <test-method status="FAIL" signature="Login(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.runners.loginRunner@64bf3bbf]" name="Login" duration-ms="42850" started-at="2020-07-08T22:49:08Z" description="login" data-provider="features" finished-at="2020-07-08T22:49:51Z">
           <params>
             <param index="0">
               <value>
@@ -22,48 +53,127 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Found Element By : By.xpath: (//input[@type='text'])[1]]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.automation.runners.loginRunner@e320068]" name="tearDownClass" is-config="true" duration-ms="589" started-at="2020-04-27T19:00:33Z" finished-at="2020-04-27T19:00:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method status="FAIL" signature="AfterSteps()[pri:0, instance:com.automation.runners.loginRunner@e320068]" name="AfterSteps" is-config="true" duration-ms="0" started-at="2020-04-27T19:00:34Z" finished-at="2020-04-27T19:00:34Z">
-          <exception class="java.lang.NullPointerException">
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.automation.testbase.testbase.closeBrowser(testbase.java:207)
-	at com.automation.runners.loginRunner.AfterSteps(loginRunner.java:80)
+              <![CDATA[cucumber.runtime.CucumberException: junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.automation.runners.loginRunner.Login(loginRunner.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.automation.stepdefinitions.login_definition.verify(login_definition.java:50)
+	at ✽.Then I verify the the title  SIGN-OF in refrence domain home page(src/test/java/com/automation/features/login.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[3]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[4]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[5]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on XP (06d377bc11046853e32fbb348ad9f664)] -> xpath: (//input)[5]]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: //*[text()='SIGN-OFF']]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.automation.runners.loginRunner@64bf3bbf]" name="tearDownClass" is-config="true" duration-ms="516" started-at="2020-07-08T22:49:51Z" finished-at="2020-07-08T22:49:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="AfterSteps()[pri:0, instance:com.automation.runners.loginRunner@64bf3bbf]" name="AfterSteps" is-config="true" duration-ms="0" started-at="2020-07-08T22:49:52Z" finished-at="2020-07-08T22:49:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSteps -->
       </class> <!-- com.automation.runners.loginRunner -->
-    </test> <!-- login -->
+      <class name="com.automation.runners.loginRunner3">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.automation.runners.loginRunner3@55d56113]" name="setUP" is-config="true" duration-ms="252" started-at="2020-07-08T22:49:08Z" finished-at="2020-07-08T22:49:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="FAIL" signature="Login(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.runners.loginRunner3@55d56113]" name="Login" duration-ms="42736" started-at="2020-07-08T22:49:08Z" description="login" data-provider="features" finished-at="2020-07-08T22:49:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.automation.runners.loginRunner3.Login(loginRunner3.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: junit.framework.ComparisonFailure: null expected:<SIGN-OF[F]> but was:<SIGN-OF[]>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.automation.stepdefinitions.login_definition.verify(login_definition.java:50)
+	at ✽.Then I verify the the title  SIGN-OF in refrence domain home page(src/test/java/com/automation/features/login.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[3]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[4]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: (//input)[5]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on XP (707c897fa8103d7b67280aeb0780001d)] -> xpath: (//input)[5]]]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: //*[text()='SIGN-OFF']]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.automation.runners.loginRunner3@55d56113]" name="tearDownClass" is-config="true" duration-ms="587" started-at="2020-07-08T22:49:51Z" finished-at="2020-07-08T22:49:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.automation.runners.loginRunner3 -->
+    </test> <!-- login1 -->
   </suite> <!-- Regression suite -->
 </testng-results>

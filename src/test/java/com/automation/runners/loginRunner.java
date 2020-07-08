@@ -9,10 +9,13 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.automation.testbase.testbase;
+import com.automation.utility.startDocker;
+import com.automation.utility.stopDocker;
 import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 
@@ -26,8 +29,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		features = "src/test/java/com/automation/features/login.feature", glue = { "com/automation/stepdefinitions" }, plugin = {
 				"pretty", "json:target/cucumber-reports/Cucumber.json", "junit:target/cucumber-reports/Cucumber.xml",
 				"html:target/cucumber-reports",
-				"com.cucumber.listener.ExtentCucumberFormatter:" },monochrome = true)
-public class loginRunner extends testbase{
+				"com.cucumber.listener.ExtentCucumberFormatter:","rerun:rerun/failed_scenarios.txt" },monochrome = true)
+public class loginRunner{
 	
 	/*@BeforeClass
 	public static void setup() {
@@ -38,7 +41,17 @@ public class loginRunner extends testbase{
 	extentProperties.setReportPath("src/main/java/com/automation/reports/report" + "_" + formater.format(calendar.getTime()) +".html");
 	}*/
     private TestNGCucumberRunner testNGCucumberRunner;
-
+@BeforeSuite
+public void dockerStart() throws IOException, InterruptedException
+{
+	 /* File f= new File("output.txt");
+			if(f.delete())
+			{
+				System.out.println("file deleted successfully");
+			}
+		  startDocker sd= new startDocker();
+		  sd.startFile();*/
+}
 	@BeforeClass
 	public void setUP() throws IOException
 	{//
@@ -75,10 +88,10 @@ public class loginRunner extends testbase{
         testNGCucumberRunner.finish();
     }
 	@AfterSuite
-	 public void AfterSteps() throws IOException {
+	 public void AfterSteps() throws IOException, InterruptedException {
 		 
-		closeBrowser();
-
+		  /*stopDocker s=new stopDocker();
+		  s.stopFile();*/
 	 }
 	
 }

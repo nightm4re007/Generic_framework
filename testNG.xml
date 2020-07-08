@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression suite" verbose="1">
-  <test name="login">
-    <classes>
-      <class name="com.automation.runners.loginRunner"></class>
-      
-    </classes>
-  </test>
-  <!--  <test name="AircraftUI">
-    <classes>
-      <class name="com.automation.runners.aircraftRunner"></class>
-      
-    </classes>
- </test>  -->
- <!-- <test name="SRide">
-    <classes>
-      <class name="com.automation.runners.SRideRunner"></class>
-      
-    </classes>
-  </test>  -->
- 
+<suite name="Regression suite" verbose="1" parallel="classes">
+	<test name="login1">
+		<classes>
+						<class name="com.automation.runners.loginRunner"></class>
+    						 <class name="com.automation.runners.loginRunner3"></class>
+  						
+		
+						<!-- <class name="com.automation.stepdefinitions.chromeTest1"></class>
+						<class name="com.automation.stepdefinitions.chromeTest2"></class>
+						<class name="com.automation.stepdefinitions.chromeTest3"></class> -->
+												
+						
+			
+			
+
+		</classes>
+		</test>
+	<!-- </test>
+	<test name="login2">
+		<classes>
+			<class name="com.automation.runners.loginRunner"></class>
+
+		</classes>
+	</test>
+	<test name="login3">
+		<classes>
+			<class name="com.automation.runners.loginRunner"></class>
+
+		</classes>
+	</test> -->
+<!-- 	<test name="placeValidation">
+		<classes>
+			<class name="com.automation.runners.placeRunner"></class>
+
+		</classes>
+	</test>
+	<test name="failedRun"> <classes> <class name="com.automation.runners.failedRunner"></class> 
+		</classes> </test> -->
+
+	<!-- <test name="SRide"> <classes> <class name="com.automation.runners.SRideRunner"></class> 
+		</classes> </test> -->
+
 </suite>

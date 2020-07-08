@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression suite]">
-  <test name="login(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression suite]" parallel="classes">
+  <test name="login1(failed)" parallel="classes">
     <classes>
       <class name="com.automation.runners.loginRunner">
         <methods>
           <include name="setUP"/>
+          <include name="dockerStart"/>
           <include name="tearDownClass"/>
           <include name="Login" invocation-numbers="0"/>
           <include name="AfterSteps"/>
         </methods>
       </class> <!-- com.automation.runners.loginRunner -->
+      <class name="com.automation.runners.loginRunner3">
+        <methods>
+          <include name="setUP"/>
+          <include name="Login" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.automation.runners.loginRunner3 -->
     </classes>
-  </test> <!-- login(failed) -->
+  </test> <!-- login1(failed) -->
 </suite> <!-- Failed suite [Regression suite] -->

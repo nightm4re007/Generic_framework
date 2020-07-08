@@ -23,12 +23,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 
 import com.automation.excelreader.excelReader;
 import com.automation.listener.webeventlistener;
+import com.automation.managers.driverManager;
 import com.automation.pageobjects.loginPage;
 import com.automation.utility.utility;
 import com.google.common.collect.ImmutableMap;
@@ -38,6 +41,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.filter.session.SessionFilter;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -46,14 +50,15 @@ import io.restassured.specification.RequestSpecification;
 public class testbase extends utility {
 	public static final Logger log = Logger.getLogger(testbase.class.getName());
 	public WebDriver dr;
-	public AndroidDriver<AndroidElement> adriver;
-	public static AppiumDriverLocalService service;
-	public EventFiringWebDriver driver;
+	public  AndroidDriver<AndroidElement> adriver;
+	public  AppiumDriverLocalService service;
+	public   EventFiringWebDriver driver;
 	public webeventlistener eventlistener;
 	public static RequestSpecification req;
 	public Boolean flag;
 	public Properties OR = new Properties();
-	driverSetter d = new driverSetter();
+	driverManager d = new driverManager();
+	 SessionFilter sessionFilter = new SessionFilter();
 
 	FileInputStream f;
 
@@ -74,11 +79,11 @@ public class testbase extends utility {
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 	}
 
-	public void init() throws Exception {
+	public void init(String urltype) throws Exception {
 		loadData("globalConfig.properties");
 		if (OR.getProperty("DeviceType").equalsIgnoreCase("desktop")) {
 			getbrowser(OR.getProperty("browser"));
-			geturl(OR.getProperty("url"));
+			geturl(OR.getProperty(urltype));
 
 		} else if (OR.getProperty("DeviceType").equalsIgnoreCase("mobile")) {
 			if ((OR.getProperty("AppType").equalsIgnoreCase("native"))
@@ -86,7 +91,7 @@ public class testbase extends utility {
 				appinit();
 			} else {
 				appinit();
-				geturl(OR.getProperty("url"));
+				geturl(OR.getProperty(urltype));
 
 			}
 
@@ -99,10 +104,18 @@ public class testbase extends utility {
 		// return driver;
 	}
 
-	public EventFiringWebDriver getbrowser(String browser) {
+	public EventFiringWebDriver getbrowser(String browser) throws MalformedURLException {
 		if (browser.equalsIgnoreCase("chrome")) {
+			/* DesiredCapabilities cap=new DesiredCapabilities();
+			  cap.setBrowserName(BrowserType.CHROME);	
+				URL u =new URL("http://192.168.99.100:4444/wd/hub");
+				 dr = new RemoteWebDriver(u,cap);*/
+				
+			
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
-			dr = new ChromeDriver(); /* initialising the chrome driver */
+			dr = new ChromeDriver(); // initialising the chrome driver 
+			
+			
 			driver = new EventFiringWebDriver(dr); /* initialising event firing webdriver as it is used to trigger the event */
 			eventlistener = new webeventlistener(); /*
 													 * initialising the webevent listener as it is used to catch the
@@ -113,7 +126,7 @@ public class testbase extends utility {
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
-			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			DesiredCapabilities cap = DesiredCapabilities.firefox();
 			cap.setBrowserName("firefox");
 			dr = new FirefoxDriver();
 			driver = new EventFiringWebDriver(dr);
@@ -143,7 +156,7 @@ public class testbase extends utility {
 
 	}
 
-	public void appinit() throws MalformedURLException {
+	public AndroidDriver<AndroidElement> appinit() throws MalformedURLException {
 
 		service = startServer();
 
@@ -167,7 +180,7 @@ public class testbase extends utility {
 
 		}
 		adriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-
+return adriver;
 	}
 
 	private void geturl(String url) throws IOException {
@@ -200,17 +213,11 @@ public class testbase extends utility {
 		return itr;
 	}
 
-	public void closeBrowser() throws IOException {
+	/*public void closeBrowser() throws IOException {
 		driver.quit();
 		log.info("driver closed");
-	}
+	}*/
 
-	public String[][] getData(String excelName, String sheetName) {
-		String path = System.getProperty("user.dir") + "/src/main/java/com/automation/testdata/" + excelName;
-		excelReader excel = new excelReader(path);
-		String[][] data = excel.getDataFromSheet(sheetName, excelName);
-		return data;
-	}
 
 	public AppiumDriverLocalService startServer() {
 
@@ -244,6 +251,7 @@ public class testbase extends utility {
 	public String getJsonPath(Response response, String key) {
 		String resp = response.asString();
 		JsonPath js = new JsonPath(resp);
+		//js.getInt("courses.size()");
 		return js.get(key).toString();
 	}
 
@@ -254,32 +262,51 @@ public class testbase extends utility {
 
 			req = new RequestSpecBuilder().setBaseUri(OR.getProperty("baseuri"))
 					.addQueryParam(OR.getProperty("querykey"), OR.getProperty("queryval"))
+					
+					.addFilter(sessionFilter)
 					.setContentType(ContentType.JSON).build();
+			
 			return req;
 		}
 		return req;
 
 	}
 
-	public driverSetter returndriver() throws IOException {
+	public driverManager returndriver() throws IOException {
 		loadData("globalConfig.properties");
 
 		if ((OR.getProperty("DeviceType").equalsIgnoreCase("mobile"))) {
+			 if(adriver == null) adriver =appinit();
+
 			d.setAdriver(adriver);
 		} else {
+			 if(driver == null) driver =getbrowser(OR.getProperty("browser"));
 			d.setDriver(driver);
 		}
 		return d;
 	}
 
-	public Boolean flagselector(driverSetter d) {
+	public Boolean flagselector(driverManager d) {
 		ArrayList l = new ArrayList();
 		l.add(d.getDriver());
 		if (!l.contains(null)) {
-			flag = true;
+			flag = true;// means run the mobile script
 		} else {
-			flag = false;
+			flag = false;// run the web script
 		}
 		return flag;
 	}
+	public void closebrowser() throws IOException
+	{loadData("globalConfig.properties");
+		 if((OR.getProperty("DeviceType").equalsIgnoreCase("mobile")))
+		 {
+			 adriver.close(); 
+
+		 }
+		 else
+		 {
+			 driver.close();
+
+		 }
+	 }
 }

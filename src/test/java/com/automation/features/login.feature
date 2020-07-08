@@ -15,14 +15,15 @@
 #<> (placeholder)
 #""
 ## (Comments)#Sample Feature Definition Template
+#@skip_scenario
+#@close_browser
 Feature: Login
-  Scenario Outline: To verify wether we are able to sign in using jetblue credentials
-   Given URL for reference domain website
-   When we hit the URL and get the microsoft page
+  Scenario Outline: To verify wether we are able to sign in using newtours credentials
+   Given URL for newtours domain website
+   When we hit the URL and get the newtours page
     When I enter my <name> and <pass> and click on sign in
-    #Then I verify the the title  <status> in refrence domain home page
+    Then I verify the the title  <status> in refrence domain home page
 
     Examples: 
      | name  | pass | status |
-     | gshetty@jetblue.com | October*123 | Welcome to Reference Domain! |
-     
+     | shettygaurav86@gmail.com | Great*123 | SIGN-OF |

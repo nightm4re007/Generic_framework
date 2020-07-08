@@ -19,7 +19,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-import com.automation.testbase.driverSetter;
+import com.automation.managers.driverManager;
+import com.automation.stepdefinitions.Hooks;
 import com.automation.testbase.testbase;
 
 import io.appium.java_client.TouchAction;
@@ -34,7 +35,7 @@ public class loginPage extends testbase {
 	AndroidDriver<AndroidElement> adriver;
 	public Boolean flag;
 
-	public loginPage(driverSetter d) throws IOException {
+	public loginPage(driverManager d) throws IOException {
 		flag = flagselector(d);
 		if (flagselector(d)) {
 			this.driver = d.getDriver();
@@ -44,7 +45,7 @@ public class loginPage extends testbase {
 			PageFactory.initElements(new AppiumFieldDecorator(d.getAdriver()), this);
 		}
 	}
-
+	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Preference']")
 	public WebElement Preferences;
 
@@ -58,10 +59,12 @@ public class loginPage extends testbase {
 	 * @FindBy(id="passw") WebElement passwd;
 	 */
 
-	@FindBy(xpath = "(//input[@type='text'])[1]")
-	WebElement search;
-	@FindBy(xpath = "//input[@type='search']")
-	WebElement searchm;
+	@FindBy(xpath = "(//input)[3]")
+	WebElement un;
+	@FindBy(xpath = "(//input)[4]")
+	WebElement pw;
+	@FindBy(xpath = "(//input)[5]")
+	WebElement sb;
 
 	@AndroidFindBy(xpath = "//*[@content-desc='15']")
 	WebElement first;
@@ -69,16 +72,31 @@ public class loginPage extends testbase {
 	@AndroidFindBy(xpath = "//*[@content-desc='45']")
 	WebElement second;
 
-	@FindBy(xpath = "//h3[text()=' Welcome to Reference Domain! ']")
+	@FindBy(xpath = "//*[text()='SIGN-OFF']")
 	WebElement validtext;
 
 	/*
 	 * @FindBy(id="submitButton") WebElement submit;
+	 * 
 	 */
+	public void navigateurl() throws IOException
+	{	
+		if (flag) {
+			loadData("globalConfig.properties");
+			driver.get(OR.getProperty("demourl"));
+
+	}
+	
+	}
+
+	
 	public void login(String username, String password) throws Exception {
+	
 		if (flag) {
 			// for web
-			genericSendKeys(search, username);
+			genericSendKeys(un, username);
+			genericSendKeys(pw, password);
+	        genericClick(sb);
 
 		} else {
 			// for native/browser apps
@@ -86,7 +104,7 @@ public class loginPage extends testbase {
 
 			adriver.findElementByAndroidUIAutomator("text(\"Views\")").click();
 			Tap(adriver, expandlist);
-			adriver.findElementByXPath("//android.widget.TextView[@text='1. Custom Adapter']").click();
+			adriver.findElementByXPath("//android.widget.TextView[@text='1. Custom Adapte']").click();
 			Tapandhold(adriver, pn);
 		}
 		Thread.sleep(6000);

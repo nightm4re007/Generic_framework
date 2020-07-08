@@ -1,0 +1,21 @@
+Attaching to selenium-hub, generic_framework_firefox_1, generic_framework_chrome_1, generic_framework_opera_1
+[36mselenium-hub    |[0m 2020-07-08 15:28:22,584 INFO Included extra file "/etc/supervisor/conf.d/selenium-hub.conf" during parsing
+[33mfirefox_1       |[0m 2020-07-08 15:28:23,231 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[35mopera_1         |[0m 2020-07-08 15:28:23,259 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[32mchrome_1        |[0m 2020-07-08 15:28:23,260 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[36mselenium-hub    |[0m 2020-07-08 15:28:22,608 INFO supervisord started with pid 7
+[36mselenium-hub    |[0m 2020-07-08 15:28:23,612 INFO spawned: 'selenium-hub' with pid 10
+[36mselenium-hub    |[0m Starting Selenium Hub with configuration:
+[36mselenium-hub    |[0m 2020-07-08 15:28:23,627 INFO success: selenium-hub entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+[33mfirefox_1       |[0m 2020-07-08 15:28:23,236 INFO supervisord started with pid 7
+[33mfirefox_1       |[0m 2020-07-08 15:28:24,240 INFO spawned: 'xvfb' with pid 10
+[32mchrome_1        |[0m 2020-07-08 15:28:23,264 INFO supervisord started with pid 7
+[35mopera_1         |[0m 2020-07-08 15:28:23,263 INFO supervisord started with pid 7
+[35mopera_1         |[0m 2020-07-08 15:28:24,268 INFO spawned: 'xvfb' with pid 10
+[32mchrome_1        |[0m 2020-07-08 15:28:24,268 INFO spawned: 'xvfb' with pid 10
+[33mfirefox_1       |[0m 2020-07-08 15:28:24,247 INFO spawned: 'selenium-node' with pid 11
+[33mfirefox_1       |[0m 2020-07-08 15:28:25,250 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+[32mchrome_1        |[0m 2020-07-08 15:28:24,290 INFO spawned: 'selenium-node' with pid 11
+[32mchrome_1        |[0m 2020-07-08 15:28:25,298 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+[35mopera_1         |[0m 2020-07-08 15:28:24,274 INFO spawned: 'selenium-node' with pid 11
+[35mopera_1         |[0m 2020-07-08 15:28:25,327 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
